@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <View
@@ -31,7 +32,7 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/black"
         android:text="호텔/리조트"
-        android:textSize="45px"
+        android:textSize="48px"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/hotel_list_back"
         app:layout_constraintLeft_toRightOf="@+id/hotel_list_back"
@@ -67,13 +68,98 @@
         />
 
     <androidx.cardview.widget.CardView
+        app:cardElevation="1dp"
+        app:cardCornerRadius="4dp"
+        android:id="@+id/hotel_list_location_cd"
         android:layout_marginLeft="20dp"
-        android:layout_width="100dp"
-        android:layout_height="30dp"
-        app:cardBackgroundColor="@color/black"
+        android:layout_width="190dp"
+        android:layout_height="38dp"
         app:layout_constraintTop_toTopOf="@+id/hotel_list_location_vi"
         app:layout_constraintBottom_toBottomOf="@+id/hotel_list_location_vi"
-        app:layout_constraintLeft_toLeftOf="@+id/hotel_list_location_vi"/>
+        app:layout_constraintLeft_toLeftOf="@+id/hotel_list_location_vi">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:src="@drawable/location"
+            android:layout_marginLeft="6dp"/>
+
+        <TextView
+            android:textSize="35px"
+            android:layout_marginLeft="7dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="홍대/합정/마포/서대문"
+            android:textColor="@color/black"
+            />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="1dp"
+        app:cardCornerRadius="4dp"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="11dp"
+        app:layout_constraintLeft_toRightOf="@+id/hotel_list_location_cd"
+        app:layout_constraintTop_toTopOf="@id/hotel_list_location_vi"
+        app:layout_constraintBottom_toBottomOf="@id/hotel_list_location_vi"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:src="@drawable/cal"
+                android:layout_marginLeft="6dp"/>
+
+            <TextView
+                android:textSize="35px"
+                android:layout_marginLeft="7dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="02.19~02.20·2명"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/horizontal_vi1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/hotel_list_location_vi"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#e2e2e2"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/hotel_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/hotel_item"
+        app:layout_constraintTop_toBottomOf="@+id/horizontal_vi1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 
 
 
