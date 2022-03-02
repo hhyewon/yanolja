@@ -1,9 +1,10 @@
-package com.example.yanolja
+package com.example.yanolja.src.hotel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.yanolja.R
 import com.example.yanolja.databinding.ActivityHotelListBinding
 
 data class Hotel(

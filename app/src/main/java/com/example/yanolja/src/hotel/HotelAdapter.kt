@@ -1,11 +1,10 @@
-package com.example.yanolja
+package com.example.yanolja.src.hotel
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yanolja.R
 import com.example.yanolja.databinding.HotelItemBinding
 
 class HotelAdapter(
@@ -15,14 +14,14 @@ class HotelAdapter(
     class ViewHolder(val binding: HotelItemBinding) :
         RecyclerView.ViewHolder(binding.root) {}
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HotelAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = HotelItemBinding.inflate(
             LayoutInflater.from(context), parent, false
         )
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: HotelAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 //        holder.binding = HotelItemBinding.inflate(inflater, parent, false)
         holder.binding.hotelItemMainIv.setImageResource(hotelListArrayList[position].hotelImg)
         holder.binding.hotelItemTypeIv.setImageResource(hotelListArrayList[position].hotelOptionImg)

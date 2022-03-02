@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yanolja">
-        <activity android:name=".MainActivity">
+        <activity android:name=".src.hotel.MainActivity">
+
+        </activity>
+        <activity android:name=".src.user.SignUpMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

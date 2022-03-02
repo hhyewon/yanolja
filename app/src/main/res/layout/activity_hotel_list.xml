@@ -16,8 +16,8 @@
 
     <ImageView
         android:id="@+id/hotel_list_back"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:layout_marginLeft="20dp"
         android:src="@drawable/back"
         app:layout_constraintBottom_toBottomOf="@+id/hotel_list_top"
@@ -32,7 +32,7 @@
         android:layout_marginTop="15dp"
         android:textColor="@color/black"
         android:text="호텔/리조트"
-        android:textSize="48px"
+        android:textSize="44.5px"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/hotel_list_back"
         app:layout_constraintLeft_toRightOf="@+id/hotel_list_back"
@@ -41,8 +41,8 @@
 
     <ImageView
         android:id="@+id/hotel_list_home"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:src="@drawable/home"
         android:layout_marginRight="15dp"
         app:layout_constraintBottom_toBottomOf="@+id/hotel_list_top"
@@ -50,8 +50,8 @@
         app:layout_constraintTop_toTopOf="parent"/>
     <ImageView
         android:id="@+id/hotel_list_cart"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
         android:src="@drawable/cart"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -67,13 +67,14 @@
         app:layout_constraintRight_toRightOf="parent"
         />
 
-    <androidx.cardview.widget.CardView
-        app:cardElevation="1dp"
+    <com.google.android.material.card.MaterialCardView
+        app:strokeColor="#cccccc"
+        app:strokeWidth="0.7dp"
         app:cardCornerRadius="4dp"
         android:id="@+id/hotel_list_location_cd"
         android:layout_marginLeft="20dp"
-        android:layout_width="190dp"
-        android:layout_height="38dp"
+        android:layout_width="184dp"
+        android:layout_height="34dp"
         app:layout_constraintTop_toTopOf="@+id/hotel_list_location_vi"
         app:layout_constraintBottom_toBottomOf="@+id/hotel_list_location_vi"
         app:layout_constraintLeft_toLeftOf="@+id/hotel_list_location_vi">
@@ -83,14 +84,14 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
         <ImageView
-            android:layout_width="25dp"
+            android:layout_width="21dp"
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:src="@drawable/location"
             android:layout_marginLeft="6dp"/>
 
         <TextView
-            android:textSize="35px"
+            android:textSize="36px"
             android:layout_marginLeft="7dp"
             android:gravity="center"
             android:layout_width="wrap_content"
@@ -101,13 +102,14 @@
         </LinearLayout>
 
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-    <androidx.cardview.widget.CardView
-        app:cardElevation="1dp"
+    <com.google.android.material.card.MaterialCardView
+        app:strokeColor="#cccccc"
+        app:strokeWidth="0.7dp"
         app:cardCornerRadius="4dp"
         android:layout_width="0dp"
-        android:layout_height="38dp"
+        android:layout_height="34dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="11dp"
         app:layout_constraintLeft_toRightOf="@+id/hotel_list_location_cd"
@@ -120,14 +122,15 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <ImageView
-                android:layout_width="25dp"
+                android:adjustViewBounds="true"
+                android:layout_width="21dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="8dp"
                 android:src="@drawable/cal"
                 android:layout_marginLeft="6dp"/>
 
             <TextView
-                android:textSize="35px"
+                android:textSize="36px"
                 android:layout_marginLeft="7dp"
                 android:gravity="center"
                 android:layout_width="wrap_content"
@@ -136,7 +139,7 @@
                 android:textColor="@color/black"
                 />
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <View
         android:id="@+id/horizontal_vi1"

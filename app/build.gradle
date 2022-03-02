@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+
 }
 
 android {
@@ -10,6 +11,8 @@ android {
     viewBinding{
         enabled=true
     }
+    dataBinding { enabled = true }
+
 
 
     defaultConfig {
@@ -45,6 +48,26 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    // https://github.com/square/retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // https://github.com/square/okhttp
+    implementation("com.squareup.okhttp3:okhttp:4.9.0")
+
+    // https://github.com/square/retrofit/tree/master/retrofit-converters/gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // https://github.com/square/okhttp/tree/master/okhttp-logging-interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    // https://github.com/ybq/Android-SpinKit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.google.android.material:material:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.0'
